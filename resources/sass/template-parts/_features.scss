@@ -39,3 +39,31 @@
         }
     }
 }
+
+.badges {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.badge {
+    align-items: center;
+    display: flex;
+    gap: 22px;
+
+    i {
+        --size: 72px;
+    }
+
+    &--content {
+        display: flex;
+        flex-direction: column;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: inherit;
+
+        .title {
+            color: var(--clr-brand-primary);
+        }
+    }
+}
