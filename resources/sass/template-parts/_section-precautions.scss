@@ -1,0 +1,14 @@
+.section--precautions {
+    padding: 96px 0;
+}
+
+.precautions {
+    align-items: flex-start;
+    display: flex;
+    gap: 72px;
+    margin-top: 96px;
+
+    &--img {
+        margin-left: auto;
+    }
+}
