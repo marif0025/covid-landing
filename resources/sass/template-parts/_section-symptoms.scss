@@ -1,0 +1,35 @@
+.section--symptoms {
+    padding: 96px 0;
+}
+
+.symptoms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: space-between;
+    margin-top: 96px;
+}
+
+.symptom {
+    align-items: flex-start;
+    background-color: #fff;
+    box-shadow: 0 4px 10px 0 #ababab40;
+    display: flex;
+    flex-basis: 50%;
+    gap: 20px;
+    max-width: 470px;
+    padding: 42px 36px 28px;
+
+    &--title {
+        font-size: 18px;
+        font-weight: 800;
+        line-height: inherit;
+        margin-bottom: 6px;
+    }
+
+    &--desc {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.6;
+    }
+}
