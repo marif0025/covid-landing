@@ -1,0 +1,36 @@
+.section--stats {
+    padding: 64px 0;
+}
+
+.stats {
+    align-items: flex-start;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 90px;
+    padding: 0 96px;
+}
+
+.stat {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    i {
+        --size: 50px;
+    }
+
+    &--data {
+        color: var(--clr-text-dark);
+        font-size: 35px;
+        font-weight: 800;
+        line-height: inherit;
+        margin-top: 12px;
+    }
+
+    &--text {
+        color: var(--clr-text-default);
+        font-size: 12px;
+        font-weight: 800;
+        margin-top: 8px;
+    }
+}

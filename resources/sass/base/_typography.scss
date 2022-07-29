@@ -1,0 +1,22 @@
+h1,
+h2,
+h3,
+h4 {
+    color: var(--clr-brand-primary);
+    font-weight: 700;
+}
+
+.section--title {
+    font-size: 3.2rem;
+    font-weight: 800;
+    line-height: inherit;
+    text-align: center;
+}
+
+.section--desc {
+    color: var(--clr-text-default);
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: inherit;
+    text-align: center;
+}

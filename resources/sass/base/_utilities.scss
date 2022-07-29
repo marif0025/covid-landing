@@ -49,3 +49,22 @@ button {
     font-family: inherit;
     outline: none;
 }
+
+.icon {
+    --size: 24px;
+
+    align-items: center;
+    color: inherit;
+    display: flex;
+    height: var(--size);
+    justify-content: center;
+    max-width: var(--size);
+    min-width: var(--size);
+    width: 100%;
+
+    svg {
+        fill: currentColor;
+        height: 100%;
+        width: 100%;
+    }
+}
