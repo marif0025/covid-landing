@@ -14,7 +14,7 @@
     margin-bottom: 24px;
     padding: 20px 0;
 
-    @include media(min, 768) {
+    @include media(min, 1024) {
         margin-bottom: 64px;
     }
 }
@@ -24,6 +24,7 @@
     font-size: 3rem;
     font-weight: 700;
     line-height: inherit;
+    z-index: 2;
 }
 
 .menu {
@@ -55,10 +56,14 @@
     &--content {
         display: flex;
 
-        @include media(max, 767) {
+        @include media(max, 1023) {
             flex-direction: column;
             gap: 40px;
         }
+    }
+
+    &--details {
+        width: 100%;
     }
 
     &--subtitle {
@@ -81,18 +86,25 @@
         font-weight: 400;
         line-height: 1.6;
         margin-top: 10px;
+        max-width: 72ch;
     }
 
     &--cta {
         margin-top: 25px;
 
-        @include media(min, 768) {
+        @include media(min, 1024) {
             margin-bottom: 135px;
         }
     }
 
     &--img {
-        align-self: flex-end;
+        align-self: center;
         line-height: 1;
+        max-width: 560px;
+        width: 100%;
+
+        @include media(min, 1024) {
+            align-self: flex-end;
+        }
     }
 }
