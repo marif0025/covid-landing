@@ -1,5 +1,8 @@
 
 import './sass/style.scss';
+
+import './ts/modules/back-to-top';
+
 import burgerMenu from './ts/components/burgermenu';
 
 // Burger menu for mobile screens

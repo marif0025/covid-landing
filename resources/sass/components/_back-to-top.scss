@@ -1,0 +1,28 @@
+.back-to-top {
+    background-color: #fff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='512' height='512' viewBox='0 0 24 24' style='enable-background:new 0 0 512 512' xml:space='preserve'%3E%3Cpath xmlns='http://www.w3.org/2000/svg' d='m12 8.413-9.314 9.314a1.481 1.481 0 0 1-2.092-2.093l10.36-10.36a1.478 1.478 0 0 1 2.092 0l10.36 10.36a1.481 1.481 0 0 1-2.092 2.093z' data-original='%23000000' fill='%23222'/%3E%3C/svg%3E");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    border-radius: 50%;
+    bottom: 0;
+    box-shadow: 0 4px 10px 0 rgb(113 113 113 / 25%);
+    display: block;
+    height: 42px;
+    opacity: 0.8;
+    position: fixed;
+    right: 32px;
+    transform: translateY(100%);
+    transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
+    width: 42px;
+
+    &:hover {
+        opacity: 1;
+        transition: opacity 0.25s ease-in-out;
+    }
+
+    &.active {
+        transform: translateY(-100%);
+        transition: transform 0.25s ease-in-out;
+    }
+}
