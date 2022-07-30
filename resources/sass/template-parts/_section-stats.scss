@@ -5,15 +5,29 @@
 .stats {
     align-items: flex-start;
     display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
     justify-content: space-between;
-    margin-top: 90px;
-    padding: 0 96px;
+    margin-top: 64px;
+
+    @include media(min, 768) {
+        margin-top: 90px;
+    }
+
+    @include media(min, 1280) {
+        padding: 0 96px;
+    }
 }
 
 .stat {
     align-items: center;
     display: flex;
+    flex-basis: 100%;
     flex-direction: column;
+
+    @include media(min, 768) {
+        flex-basis: 25%;
+    }
 
     i {
         --size: 50px;

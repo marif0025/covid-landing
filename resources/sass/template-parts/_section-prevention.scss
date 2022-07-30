@@ -1,6 +1,12 @@
 .section--prevention {
     padding: 96px 0;
 
+    @include media(max, 1023) {
+        .features {
+            gap: 64px;
+        }
+    }
+
     .features {
         margin: 0;
     }
@@ -37,8 +43,12 @@
     }
 
     &--content {
-        padding: 36px 20px;
+        padding: 24px 14px;
         text-align: center;
+
+        @include media(min, 768) {
+            padding: 36px 20px;
+        }
     }
 
     &--title {
@@ -49,7 +59,11 @@
 
     &--desc {
         color: var(--clr-text-default);
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         font-weight: 600;
+
+        @include media(min, 768) {
+            font-size: 1.6rem;
+        }
     }
 }

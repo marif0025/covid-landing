@@ -1,13 +1,21 @@
 .section--symptoms {
-    padding: 96px 0;
+    padding: 64px 0;
+
+    @include media(min, 768) {
+        padding: 96px 0;
+    }
 }
 
 .symptoms {
     display: flex;
     flex-wrap: wrap;
-    gap: 50px;
+    gap: 30px 0;
     justify-content: space-between;
-    margin-top: 96px;
+    margin-top: 64px;
+
+    @include media(min, 768) {
+        margin-top: 96px;
+    }
 }
 
 .symptom {
@@ -15,10 +23,27 @@
     background-color: #fff;
     box-shadow: 0 4px 10px 0 #ababab40;
     display: flex;
-    flex-basis: 50%;
+    flex-basis: 100%;
     gap: 20px;
     max-width: 470px;
-    padding: 42px 36px 28px;
+    padding: 32px 24px 20px;
+
+    @include media(min, 768) {
+        flex-basis: 48%;
+    }
+
+    @include media(min, 1024) {
+        padding: 42px 36px 28px;
+    }
+
+    img {
+        max-width: 64px;
+        width: 100%;
+
+        @include media(min, 768) {
+            max-width: 96px;
+        }
+    }
 
     &--title {
         font-size: 18px;

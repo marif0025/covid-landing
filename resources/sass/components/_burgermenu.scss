@@ -1,0 +1,66 @@
+.burger-menu {
+    --size: 32px;
+    --color: var(--clr-brand-primary);
+
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    height: var(--size);
+    justify-content: center;
+    margin-left: auto;
+    width: var(--size);
+    z-index: 2;
+
+    @include media(min, 769) {
+        display: none;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &.open-menu {
+        span {
+            background-color: transparent;
+
+            &::after {
+                top: 0;
+                transform: rotate(45deg);
+            }
+
+            &::before {
+                top: 0;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    span {
+        background-color: var(--color);
+        display: inline-block;
+        height: 2px;
+        position: relative;
+        transition: all 0.25s ease-in-out;
+        width: 24px;
+
+        &::before,
+        &::after {
+            background-color: var(--color);
+            content: '';
+            display: inline-block;
+            height: 100%;
+            left: 0;
+            position: absolute;
+            transition: all 0.25s ease-in-out;
+            width: 100%;
+        }
+
+        &::before {
+            top: -8px;
+        }
+
+        &::after {
+            top: 8px;
+        }
+    }
+}

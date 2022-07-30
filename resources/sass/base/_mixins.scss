@@ -1,0 +1,16 @@
+/*
+$minmax: Media Screen Min or Media Screen Max;
+$Value: Screen Size in Pixels
+*/
+
+@mixin media($minmax, $value) {
+    @media only screen and (#{$minmax}-width: #{$value}px) {
+        @content;
+    }
+}
+
+@mixin mediaheight($minmax, $value) {
+    @media only screen and (#{$minmax}-height: #{$value}px) {
+        @content;
+    }
+}

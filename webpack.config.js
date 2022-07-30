@@ -103,7 +103,7 @@ module.exports = (env) => ({
 
     devServer: {
         compress: true,
-        port: 7000,
+        port: 7040,
         devMiddleware: {
             index: true,
             mimeTypes: { phtml: 'text/html' },

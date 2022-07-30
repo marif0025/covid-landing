@@ -1,26 +1,55 @@
 .features {
-    align-items: center;
     display: flex;
-    gap: 110px;
+    flex-direction: column;
+    gap: 32px;
     margin: 96px 0;
+
+    @include media(min, 820) {
+        flex-direction: row;
+
+        &.reversed {
+            flex-direction: row-reverse;
+        }
+    }
+
+    @include media(min, 1024) {
+        gap: 64px;
+    }
+
+    @include media(min, 1220) {
+        align-items: center;
+        gap: 110px;
+    }
 
     &--img {
         line-height: 1;
+
+        @include media(min, 820) {
+            width: 50%;
+        }
     }
 
     &--title {
-        font-size: 3.2rem;
+        font-size: 2.4rem;
         font-weight: 800;
         line-height: inherit;
         margin-bottom: 12px;
+
+        @include media(min, 1024) {
+            font-size: 3.2rem;
+        }
     }
 
     &--desc {
         color: var(--clr-text-default);
-        font-size: 2rem;
+        font-size: 1.6rem;
         font-weight: 400;
         margin-bottom: 12px;
         max-width: 42ch;
+
+        @include media(min, 1024) {
+            font-size: 2rem;
+        }
     }
 
     &--list {
@@ -44,32 +73,60 @@
             }
         }
     }
+
+    &--cta {
+        @include media(max, 767) {
+            margin: 32px auto 0;
+        }
+    }
 }
 
 .badges {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    gap: 42px 32px;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include media(min, 1024) {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 .badge {
     align-items: center;
     display: flex;
+    flex-basis: 50%;
     gap: 22px;
 
     i {
-        --size: 72px;
+        --size: 32px;
+
+        @include media(min, 768) {
+            --size: 72px;
+        }
     }
 
     &--content {
         display: flex;
         flex-direction: column;
-        font-size: 18px;
         font-weight: 600;
         line-height: inherit;
 
         .title {
             color: var(--clr-brand-primary);
+            font-size: 16px;
+            margin-bottom: 6px;
+
+            @include media(min, 768) {
+                font-size: 18px;
+            }
+        }
+
+        .text {
+            font-size: 14px;
+
+            @include media(min, 768) {
+                font-size: 16px;
+            }
         }
     }
 }

@@ -1,14 +1,40 @@
 .section--precautions {
-    padding: 96px 0;
+    padding: 64px 0;
+
+    @include media(min, 768) {
+        padding: 96px 0;
+    }
 }
 
 .precautions {
     align-items: flex-start;
     display: flex;
-    gap: 72px;
-    margin-top: 96px;
+    gap: 22px;
+    margin-top: 64px;
+
+    @include media(min, 768) {
+        margin-top: 96px;
+    }
+
+    @include media(min, 1024) {
+        gap: 72px;
+    }
+
+    @include media(max, 914) {
+        flex-wrap: wrap;
+
+        .features--list {
+            order: 2;
+        }
+    }
 
     &--img {
-        margin-left: auto;
+        @include media(max, 1023) {
+            order: 1;
+        }
+
+        @include media(min, 1024) {
+            margin-left: auto;
+        }
     }
 }

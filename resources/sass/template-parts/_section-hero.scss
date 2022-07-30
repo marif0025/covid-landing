@@ -1,15 +1,22 @@
 .section--hero {
     // background-color: var(--clr-bg-hero);
-    border-radius: 0 0 300px;
     overflow: hidden;
+
+    @include media(min, 768) {
+        border-radius: 0 0 300px;
+    }
 }
 
 .navbar {
     align-items: center;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 64px;
+    margin-bottom: 24px;
     padding: 20px 0;
+
+    @include media(min, 768) {
+        margin-bottom: 64px;
+    }
 }
 
 .site--logo {
@@ -21,8 +28,12 @@
 
 .menu {
     align-items: center;
-    display: flex;
+    display: none;
     gap: 20px;
+
+    @include media(min, 769) {
+        display: flex;
+    }
 
     &--link {
         border-bottom: 2px solid transparent;
@@ -43,6 +54,11 @@
 .hero {
     &--content {
         display: flex;
+
+        @include media(max, 767) {
+            flex-direction: column;
+            gap: 40px;
+        }
     }
 
     &--subtitle {
@@ -68,8 +84,11 @@
     }
 
     &--cta {
-        margin-bottom: 135px;
         margin-top: 25px;
+
+        @include media(min, 768) {
+            margin-bottom: 135px;
+        }
     }
 
     &--img {
