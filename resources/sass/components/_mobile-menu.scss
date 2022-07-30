@@ -9,6 +9,10 @@
     transition: transform 0.25s ease-in-out;
     width: 100vw;
     z-index: 1;
+
+    @include media(min, 769) {
+        display: none;
+    }
 }
 
 .mobile--links {
